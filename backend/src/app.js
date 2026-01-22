@@ -5,10 +5,10 @@ const app = express();
 app.use(express.json());
 
 import userRouter from "./routes/user.route.js";
-// import PostRouter from "./routes/post.routes"
+import postRouter from "./routes/post.route.js"
 
 app.use("/api/users", userRouter);
-// app.use("/api/post", PostRouter);
+app.use("/api/posts", postRouter);
 
 
 
